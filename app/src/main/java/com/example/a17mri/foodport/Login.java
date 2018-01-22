@@ -39,18 +39,15 @@ public class Login extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
 
-
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 if (imm != null) {
                     imm.hideSoftInputFromWindow(password.getWindowToken(),
                             InputMethodManager.RESULT_UNCHANGED_SHOWN);
                 }
 
-                if(login(emilAddress.getText().toString(),password.getText().toString())){
-                    Intent intent=new Intent(getApplicationContext(),Home.class);
-                    startActivity(intent);
-                    finish();
-                }
+                login(emilAddress.getText().toString(),password.getText().toString());
+
+
             }
         });
     }
@@ -79,7 +76,7 @@ public class Login extends AppCompatActivity  {
     }
 
 
-    private boolean login(String email,String password){
+    private void login(String email,String password){
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -87,7 +84,9 @@ public class Login extends AppCompatActivity  {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                           success=true;
+                            Intent intent=new Intent(getApplicationContext(),Home.class);
+                            startActivity(intent);
+                            finish();
                         } else {
                             String message= task.getException().getMessage();
                             // If sign in fails, display a message to the user.
@@ -98,7 +97,6 @@ public class Login extends AppCompatActivity  {
                         // ...
                     }
                 });
-        return success;
     }
 
 
