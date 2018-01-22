@@ -8,24 +8,24 @@
     tools:context="com.example.a17mri.foodport.Main">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/createAccount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="36dp"
         android:layout_marginEnd="38dp"
         android:layout_marginStart="38dp"
         android:text="@string/create_account"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
-        style="@style/MyButton"
+        android:backgroundTint="#37474F"
+        android:id="@+id/login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="160dp"
         android:layout_marginEnd="38dp"
         android:layout_marginStart="38dp"
         android:text="@string/login"

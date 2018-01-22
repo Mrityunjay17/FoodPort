@@ -4,14 +4,18 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/BlueGrey</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:colorButtonNormal">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/BlueGrey</item>
+        <item name="editTextStyle">@style/EditText</item>
     </style>
 
 
-    <style name="MyButton" parent="Theme.AppCompat.Light">
-        <item name="android:colorButtonNormal">@color/colorPrimaryDark</item>
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
     </style>
+
 </resources>
